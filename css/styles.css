@@ -1,0 +1,14 @@
+/* Estilos iniciales */
+:root {
+  --color-primary: #1C5D99;
+  --color-accent: #FFB703;
+  --color-bg: #F8FAFC;
+  --color-text: #0F172A;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
