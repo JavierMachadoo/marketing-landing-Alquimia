@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alquimia Marketing — Consultoría</title>
-  <!-- Bootstrap CSS and Icons -->
+  <!-- Bootstrap CSS and Icons (solo para el resto de la web, el globito ya no lo usa) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -41,7 +41,108 @@
     </div>
   </section>
 
-  <!-- … resto de secciones … -->
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section section--alt">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <h2><span class="section-title-accent">Servicios</span></h2>
+        <p>Lo que ofrecemos para potenciar tu marca</p>
+      </header>
+      <div class="cards-grid">
+        <div class="card" data-reveal="fade-up">
+          <div class="card-accent-bar"></div>
+          <h3>Estrategia de Marketing</h3>
+          <p>Definimos objetivos claros y un plan de acción.</p>
+        </div>
+        <div class="card" data-reveal="fade-up">
+          <div class="card-accent-bar"></div>
+          <h3>Gestión de Redes Sociales</h3>
+          <p>Construimos y mantenemos tu presencia digital.</p>
+        </div>
+        <div class="card" data-reveal="fade-up">
+          <div class="card-accent-bar"></div>
+          <h3>Campañas Publicitarias</h3>
+          <p>Maximizamos tu inversión en medios online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobremi" class="section section--white">
+    <div class="container about-grid">
+      <div class="about-media" data-reveal="fade-left">
+        <img src="assets/img/santiagoMachado.jpg" alt="Santiago Machado, consultor de marketing">
+      </div>
+      <div class="about-copy" data-reveal="fade-up">
+        <h2><span class="about-title-accent"></span>Sobre mí</h2>
+        <p class="about-text">
+          Soy <strong>Santiago Machado</strong>, consultor de marketing digital con más de 10 años ayudando a empresas y emprendedores a crecer con estrategias efectivas y personalizadas.
+        </p>
+        <ul class="about-highlights">
+          <li>+10 años de experiencia en marketing digital</li>
+          <li>Experiencia internacional en Latinoamérica y EE.UU.</li>
+          <li>Docente universitario en Estrategia y Marketing Digital</li>
+          <li>Consultoría personalizada para pymes y startups</li>
+          <li>Enfoque en resultados medibles y crecimiento sostenible</li>
+        </ul>
+        <a href="https://www.linkedin.com/in/santiago-machado-mba-8627762/" target="_blank" class="btn btn--linkedin" aria-label="Ver LinkedIn de Santiago Machado">
+          <svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 34 34">
+            <g>
+              <rect fill="#0077B5" width="34" height="34" rx="6"/>
+              <path d="M10.1 27H5.8V13.6h4.3V27zM8 12c-1.4 0-2.3-.9-2.3-2.1 0-1.2.9-2.1 2.3-2.1S10.3 8.7 10.3 10c0 1.2-.9 2-2.3 2zm19.5 15h-4.2v-6.9c0-1.7-.6-2.9-2-2.9-1.1 0-1.7.8-2 1.6-.1.3-.1.7-.1 1.1V27h-4.2s.1-11.8 0-13h4.2v1.9c.6-.9 1.7-2.3 4.1-2.3 3 0 5.2 2 5.2 6.1V27z" fill="#fff"/>
+            </g>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section section--alt">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <h2><span class="section-title-accent">Testimonios</span></h2>
+      </header>
+      <div class="cards-grid">
+        <div class="card" data-reveal="fade-up">
+          <div class="card-accent-bar"></div>
+          <p>"Gracias a Alquimia crecimos un 30% en 6 meses."</p>
+          <span>- Cliente 1</span>
+        </div>
+        <div class="card" data-reveal="fade-up">
+          <div class="card-accent-bar"></div>
+          <p>"Profesionalismo y resultados claros, 100% recomendado."</p>
+          <span>- Cliente 2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes" class="section section--clients">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <h2><span class="section-title-accent section-title-accent--big"></span>Clientes</h2>
+        <p>Empresas y profesionales que confiaron en Alquimia Marketing</p>
+      </header>
+      <div class="clients-grid">
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client1.png" alt="Cliente 1">
+          <span>Montevideo, UY</span>
+        </div>
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client2.png" alt="Cliente 2">
+          <span>Miami, USA</span>
+        </div>
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client3.png" alt="Cliente 3">
+          <span>California, USA</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer" id="footer-contacto">
@@ -59,32 +160,31 @@
   </footer>
 
   <!-- GLOBITO FLOTANTE -->
-  <div class="position-fixed end-0 bottom-0 p-3" style="z-index: 1200">
-    <div class="dropup globito-dropup">
-      <button class="btn globito-btn rounded-circle shadow-lg"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-        <i class="bi bi-person-fill fs-3"></i>
-      </button>
-      <ul class="dropdown-menu globito-menu border-0 shadow-lg">
-        <li>
-          <a class="dropdown-item d-flex align-items-center gap-2 globito-link"
-             href="https://wa.me/59812345678" target="_blank">
-            <i class="bi bi-whatsapp globito-icon-wpp"></i> WhatsApp
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item d-flex align-items-center gap-2 globito-link"
-             href="mailto:contacto@alquimia.com">
-            <i class="bi bi-envelope-fill globito-icon-mail"></i> Email
-          </a>
-        </li>
-      </ul>
+  <div class="contact-fab" id="contactFab" aria-live="polite">
+    <button class="fab-btn" id="fabBtn" aria-label="Abrir opciones de contacto" aria-expanded="false">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#0b323c"/>
+        <path d="M12 12c1.933 0 3.5-1.567 3.5-3.5S13.933 5 12 5s-3.5 1.567-3.5 3.5S10.067 12 12 12zm0 2c-2.33 0-7 1.167-7 3.5V20h14v-2.5c0-2.333-4.67-3.5-7-3.5z" fill="#fff"/>
+      </svg>
+    </button>
+    <div class="fab-options" id="fabOptions" aria-label="Opciones de contacto">
+      <a class="fab-link" href="https://wa.me/59812345678" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#25D366" d="M12.001 2.002C6.477 2.002 2 6.477 2 12c0 1.921.509 3.726 1.472 5.312l-1.592 5.215 5.357-1.522A9.96 9.96 0 0 0 12.001 22c5.523 0 10-4.477 10-10s-4.477-9.998-9.999-9.998zm0 18.116a7.95 7.95 0 0 1-4.163-1.188l-.297-.178-3.18.905.904-3.099-.194-.326A7.96 7.96 0 0 1 4.001 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8.118-8 8.118z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+      <a class="fab-link" href="mailto:contacto@alquimia.com">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#0072c6" d="M12 13.065 2 6.5V17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6.5l-10 6.565z"/>
+          <path fill="#0072c6" d="M22 5.5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2l10 6.5L22 5.5z"/>
+        </svg>
+        <span>Email</span>
+      </a>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap Bundle (para otros componentes de la web) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -38,3 +38,29 @@ const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+// FAB de contacto (sin Bootstrap)
+(() => {
+  const fab = document.getElementById('contactFab');
+  const btn = document.getElementById('fabBtn');
+  if (!fab || !btn) return;
+
+  const close = () => {
+    fab.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  const toggle = (e) => {
+    e.stopPropagation();
+    const open = !fab.classList.contains('open');
+    fab.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+
+  btn.addEventListener('click', toggle);
+  document.addEventListener('click', (e) => {
+    if (!fab.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
