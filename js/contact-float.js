@@ -1,17 +1,26 @@
-// Botón flotante de contacto (abajo a la izquierda)
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("openContactFloat");
-  const menu = document.getElementById("contactFloatMenu");
+document.addEventListener('DOMContentLoaded', function() {
+  const openBtn = document.getElementById('openContactFloat');
+  const menu = document.getElementById('contactFloatMenu');
+  let open = false;
 
-  btn.addEventListener("click", function (e) {
+  function toggleMenu(e) {
     e.stopPropagation();
-    menu.classList.toggle("open");
-  });
+    open = !open;
+    menu.classList.toggle('open', open);
+    openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
 
-  // Cierra el menú si se hace click fuera
-  document.addEventListener("click", function (e) {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove("open");
-    }
+  function closeMenu() {
+    open = false;
+    menu.classList.remove('open');
+    openBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  openBtn.addEventListener('click', toggleMenu);
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && e.target !== openBtn) closeMenu();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMenu();
   });
 });
