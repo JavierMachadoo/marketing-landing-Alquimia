@@ -1,11 +1,11 @@
 /* Variables y reset básico */
 :root{
-  --color-primary:#1C5D99;
-  --color-primary-700:#154874;
-  --color-accent:#FFB703;
-  --color-bg:#F8FAFC;
-  --color-text:#0F172A;
-  --color-muted:#475569;
+  --color-primary:#02a99d;        /* Verde agua: botones/acento */
+  --color-primary-700:#02867c;    /* Un poco más oscuro para hover */
+  --color-accent:#0b323c;         /* Azul oscuro para headers o CTA */
+  --color-bg:#ffffff;             /* Fondo blanco */
+  --color-text:#0b323c;           /* Texto principal */
+  --color-muted:#475569;          /* Texto secundario */
   --color-border:#E2E8F0;
 
   --radius:16px;
@@ -13,7 +13,6 @@
   --shadow-md:0 10px 24px rgba(0,0,0,.10);
 
   --container:1200px;
-
   --space-1:8px;
   --space-2:12px;
   --space-3:16px;
