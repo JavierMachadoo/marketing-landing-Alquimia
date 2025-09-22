@@ -1,8 +1,8 @@
 /* Variables y reset básico */
 :root{
   --color-primary:#02a99d;        /* Verde agua: botones/acento */
-  --color-primary-700:#02867c;    /* Un poco más oscuro para hover */
-  --color-accent:#0b323c;         /* Azul oscuro para headers o CTA */
+  --color-primary-700:#02867c;    /* Más oscuro para hover */
+  --color-accent:#0b323c;         /* Azul oscuro para headers */
   --color-bg:#ffffff;             /* Fondo blanco */
   --color-text:#0b323c;           /* Texto principal */
   --color-muted:#475569;          /* Texto secundario */
@@ -54,27 +54,25 @@ p{margin:0 0 var(--space-3)}
   top: 0;
   z-index: 50;
   background: #fff;
-  border-bottom: 3px solid var(--color-primary); /* más grosor */
+  border-bottom: 3px solid var(--color-primary);
   padding: 0 var(--space-4);
 }
 .header-inner {
   display: grid;
   grid-template-columns: auto 1fr auto; /* logo - nav - CTA */
   align-items: center;
-  min-height: 80px; /* más alto */
+  min-height: 90px; /* un poco más alto para encajar logo */
   gap: var(--space-4);
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  font-weight: 700;
-  color: var(--color-primary-700);
-  font-size: 1.2rem;
 }
 .brand .logo {
-  height: 40px;
+  max-height: 80px; /* controla tamaño del logo */
   width: auto;
+  object-fit: contain;
+  display: block;
 }
 .nav ul {
   display: flex;
@@ -111,7 +109,9 @@ p{margin:0 0 var(--space-3)}
 .btn--primary:hover{box-shadow:var(--shadow-md);background:var(--color-primary-700)}
 .btn--ghost{background:#fff;border-color:var(--color-border)}
 .btn--ghost:hover{box-shadow:var(--shadow-sm)}
-.btn--accent{background:var(--color-accent);color:#000}
+/* Usamos el mismo color que Contacto para el botón de mail */
+.btn--accent{background:var(--color-primary);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--accent:hover{box-shadow:var(--shadow-md);background:var(--color-primary-700)}
 
 /* HERO */
 .hero{
@@ -205,8 +205,8 @@ p{margin:0 0 var(--space-3)}
 @media (max-width: 640px){
   .cards-grid,.testimonials-grid{grid-template-columns:1fr}
   .hero-actions{flex-direction:column;align-items:flex-start}
-  .header-inner{grid-template-columns: auto auto} /* logo + CTA arriba en mobile */
-  .nav{display:none} /* nav se puede ocultar por ahora */
+  .header-inner{grid-template-columns: auto auto}
+  .nav{display:none}
 }
 
 /* Respeto por usuarios con motion reducido */
@@ -215,3 +215,4 @@ p{margin:0 0 var(--space-3)}
   .btn{transition:none}
   [data-reveal]{transition:none;transform:none;opacity:1}
 }
+
