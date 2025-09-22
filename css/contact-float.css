@@ -17,7 +17,7 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #fff;
+  background: #0b323c;
   box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
   border: 2px solid #02a99d;
   display: flex;
@@ -34,8 +34,8 @@
   will-change: transform, box-shadow;
 }
 .contact-float-btn svg {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   display: block;
 }
 .contact-float-btn:hover,
@@ -45,11 +45,6 @@
   box-shadow: 0 10px 32px rgba(2,169,157,0.14);
   transform: scale(1.09) translateY(-2px);
 }
-.contact-float-btn:hover svg path,
-.contact-float-btn:focus svg path {
-  fill: #fff;
-}
-
 .contact-float-menu {
   display: flex;
   flex-direction: column;
@@ -127,4 +122,13 @@
   .contact-float-menu { gap: 8px; }
   .contact-float-link { width: 43px; height: 43px; }
   .contact-float-link svg { width: 24px; height: 24px; }
+}
+
+/* Mini logo en el header */
+.logo-titulo {
+  height: 34px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
 }
