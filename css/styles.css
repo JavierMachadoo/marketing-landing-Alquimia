@@ -34,12 +34,13 @@ img { max-width: 100%; height: auto; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-3) var(--space-5);
+  padding: 0 var(--space-5);   /* sacamos padding vertical para que el logo mande */
   background: #fff;
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 70px; /* alto fijo del header */
 }
 
 .header-logo {
@@ -49,7 +50,9 @@ img { max-width: 100%; height: auto; }
 }
 
 .header-logo img {
-  height: 55px;   /* podés ajustar si querés más grande */
+  height: 100%;   /* el logo se adapta al alto del header */
+  max-height: 70px; /* no pasa del header */
+  width: auto;   /* mantiene proporción */
 }
 
 .header-logo span {
