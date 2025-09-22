@@ -6,12 +6,12 @@
   <title>Alquimia Marketing — Consultoría</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="top">
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#top">
         <img src="assets/img/logoAlquimia.svg" alt="Logo de Alquimia Marketing" class="logo">
       </a>
       <nav class="nav">
@@ -19,6 +19,7 @@
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#sobremi">Sobre mí</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#clientes">Clientes</a></li>
         </ul>
       </nav>
       <div class="header-cta">
@@ -86,74 +87,71 @@
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section section--alt">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <h2>Testimonios</h2>
+      </header>
+      <div class="cards-grid">
+        <div class="card testimonial" data-reveal="fade-up">
+          <p>"Gracias a Alquimia crecimos un 30% en 6 meses."</p>
+          <span>- Cliente 1</span>
+        </div>
+        <div class="card testimonial" data-reveal="fade-up">
+          <p>"Profesionalismo y resultados claros, 100% recomendado."</p>
+          <span>- Cliente 2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes" class="section section--alt">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <h2>Clientes</h2>
+        <p>Empresas y profesionales que confiaron en Alquimia Marketing</p>
+      </header>
+
+      <div class="clients-grid">
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client1.png" alt="Cliente 1">
+          <span>Montevideo, UY</span>
+        </div>
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client2.png" alt="Cliente 2">
+          <span>Miami, USA</span>
+        </div>
+        <div class="client" data-reveal="fade-up">
+          <img src="assets/img/client3.png" alt="Cliente 3">
+          <span>California, USA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
   <section id="contacto" class="cta">
     <div class="container cta-inner" data-reveal="fade-up">
       <h2>¿Listo para hacer crecer tu negocio?</h2>
       <p>Escribime y agendemos una reunión sin costo.</p>
       <div class="cta-actions">
-        <a href="mailto:contacto@alquimia.com" class="btn btn--primary">Enviar mail</a>
+        <a href="mailto:contacto@alquimia.com" class="btn btn--primary">📧 Enviar mail</a>
+        <a href="https://wa.me/59812345678" target="_blank" class="btn btn--primary">💬 WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <section id="clientes" class="section section--alt">
-  <div class="container">
-    <header class="section-header" data-reveal="fade-up">
-      <h2>Clientes</h2>
-      <p>Empresas y profesionales que confiaron en Alquimia Marketing</p>
-    </header>
-
-    <div class="clients-grid">
-      <div class="client" data-reveal="fade-up">
-        <img src="assets/img/client1.png" alt="Cliente 1">
-        <span>Montevideo, UY</span>
-      </div>
-      <div class="client" data-reveal="fade-up">
-        <img src="assets/img/client2.png" alt="Cliente 2">
-        <span>Miami, USA</span>
-      </div>
-      <div class="client" data-reveal="fade-up">
-        <img src="assets/img/client3.png" alt="Cliente 3">
-        <span>California, USA</span>
-      </div>
-      <!-- Agregás más clientes igual -->
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a href="#top" class="footer-logo-link">
+        <img src="assets/img/logoAlquimia.svg" alt="Logo Alquimia Marketing" class="footer-logo">
+      </a>
+      <p class="footer-copy">© Alquimia Marketing. Desde 2017. Todos los derechos reservados.</p>
     </div>
-  </div>
-</section>
-
- <footer class="site-footer">
-  <div class="container footer-grid">
-    <!-- Columna 1: Logo + descripción -->
-    <div class="footer-about">
-      <img src="assets/img/logoAlquimia.svg" alt="Logo Alquimia Marketing" class="footer-logo">
-      <p>Consultoría de marketing clara y efectiva para pymes y profesionales.</p>
-    </div>
-
-    <!-- Columna 2: Links -->
-    <nav class="footer-nav">
-      <h4>Navegación</h4>
-      <ul>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- Columna 3: Contacto -->
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p><a href="mailto:contacto@alquimia.com">📧 contacto@alquimia.com</a></p>
-      <p><a href="https://wa.me/59812345678" target="_blank">💬 WhatsApp</a></p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> Alquimia Marketing. Todos los derechos reservados.</p>
-  </div>
-</footer>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
