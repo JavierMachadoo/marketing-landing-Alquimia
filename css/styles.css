@@ -569,3 +569,13 @@ img { max-width: 100%; height: auto; }
 .client:hover img {
   filter: none;
 }
+.clients-grid--all {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2.4rem 2.4rem;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center; /* <--- Esto centra la última fila */
+}
