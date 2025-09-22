@@ -287,13 +287,12 @@ img { max-width: 100%; height: auto; }
 /* --- Menú flotante de contacto --- */
 .floating-menu {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0;
 }
 
 .floating-btn {
@@ -317,20 +316,22 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 6px 24px rgba(0,0,0,0.22);
 }
 
-/* Las opciones abren HACIA ARRIBA del botón */
+/* Opciones que se abren hacia arriba */
 .floating-options {
   opacity: 0;
   pointer-events: none;
-  margin-bottom: 10px;
-  transition: opacity 0.25s;
+  margin-bottom: 12px;
+  transition: opacity 0.25s, transform 0.25s;
   display: flex;
-  flex-direction: column-reverse; /* ¡Esto abre los links para arriba! */
+  flex-direction: column-reverse;
   gap: 12px;
+  transform: translateY(10px);
 }
 
 .floating-menu.open .floating-options {
   opacity: 1;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .floating-link {
@@ -342,19 +343,13 @@ img { max-width: 100%; height: auto; }
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.16);
-  color: #25d366;
   font-size: 22px;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
 
-.floating-link.whatsapp {
-  color: #25d366;
-}
-
-.floating-link.email {
-  color: #0072c6;
-}
+.floating-link.whatsapp { color: #25d366; }
+.floating-link.email { color: #0072c6; }
 
 .floating-link:hover {
   background: #f9f9f9;
@@ -373,11 +368,6 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (max-width: 600px) {
-  .floating-menu {
-    bottom: 0;
-    right: 0;
-    padding: 0;
-  }
   .floating-btn {
     width: 48px;
     height: 48px;
