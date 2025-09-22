@@ -317,14 +317,14 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 6px 24px rgba(0,0,0,0.22);
 }
 
-/* Opciones flotantes ocultas por defecto (salen para ARRIBA) */
+/* Las opciones abren HACIA ARRIBA del botón */
 .floating-options {
   opacity: 0;
   pointer-events: none;
   margin-bottom: 10px;
   transition: opacity 0.25s;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; /* ¡Esto abre los links para arriba! */
   gap: 12px;
 }
 
