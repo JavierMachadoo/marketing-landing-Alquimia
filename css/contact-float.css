@@ -18,7 +18,6 @@
   height: 58px;
   border-radius: 50%;
   background: #0b323c;
-  box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
   border: 2px solid #02a99d;
   display: flex;
   align-items: center;
@@ -26,17 +25,9 @@
   cursor: pointer;
   outline: none;
   padding: 0;
-  transition: 
-    box-shadow 0.27s cubic-bezier(.33,1,.68,1),
-    background 0.18s cubic-bezier(.33,1,.68,1),
-    border 0.18s cubic-bezier(.33,1,.68,1),
-    transform 0.17s cubic-bezier(.33,1,.68,1);
+  box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
+  transition: box-shadow 0.27s cubic-bezier(.33,1,.68,1), background 0.18s cubic-bezier(.33,1,.68,1), border 0.18s cubic-bezier(.33,1,.68,1), transform 0.17s cubic-bezier(.33,1,.68,1);
   will-change: transform, box-shadow;
-}
-.contact-float-btn svg {
-  width: 34px;
-  height: 34px;
-  display: block;
 }
 .contact-float-btn:hover,
 .contact-float-btn:focus {
@@ -45,6 +36,13 @@
   box-shadow: 0 10px 32px rgba(2,169,157,0.14);
   transform: scale(1.09) translateY(-2px);
 }
+.icon-user {
+  width: 34px;
+  height: 34px;
+  display: block;
+  object-fit: contain;
+}
+
 .contact-float-menu {
   display: flex;
   flex-direction: column;
@@ -53,9 +51,7 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(24px) scale(.96);
-  transition: 
-    opacity 0.32s cubic-bezier(.33,1,.68,1),
-    transform 0.22s cubic-bezier(.33,1,.68,1);
+  transition: opacity 0.32s cubic-bezier(.33,1,.68,1), transform 0.22s cubic-bezier(.33,1,.68,1);
   align-items: flex-end;
   will-change: transform, opacity;
   filter: drop-shadow(0 4px 16px rgba(11,50,60,0.10));
@@ -76,20 +72,11 @@
   box-shadow: 0 2px 8px rgba(2,169,157,0.09);
   border: 2px solid #e0e0e0;
   font-size: 1rem;
-  transition:
-    background 0.15s cubic-bezier(.33,1,.68,1),
-    border 0.15s cubic-bezier(.33,1,.68,1),
-    box-shadow 0.19s cubic-bezier(.33,1,.68,1),
-    transform 0.19s cubic-bezier(.33,1,.68,1);
+  transition: background 0.15s cubic-bezier(.33,1,.68,1), border 0.15s cubic-bezier(.33,1,.68,1), box-shadow 0.19s cubic-bezier(.33,1,.68,1), transform 0.19s cubic-bezier(.33,1,.68,1);
   will-change: transform, opacity;
   color: #0b323c;
   opacity: 0.96;
   outline: none;
-}
-.contact-float-link svg {
-  width: 28px;
-  height: 28px;
-  display: block;
 }
 .contact-float-link.whatsapp {
   border-color: #25D366;
@@ -117,11 +104,11 @@
 .contact-float-link:active {
   transform: scale(0.96);
 }
-@media (max-width: 600px) {
-  .contact-float { right: 10px; bottom: 10px; }
-  .contact-float-menu { gap: 8px; }
-  .contact-float-link { width: 43px; height: 43px; }
-  .contact-float-link svg { width: 24px; height: 24px; }
+.icon-contact {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
 }
 
 /* Mini logo en el header */
@@ -131,4 +118,12 @@
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  .contact-float { right: 10px; bottom: 10px; }
+  .contact-float-menu { gap: 8px; }
+  .contact-float-link { width: 43px; height: 43px; }
+  .icon-contact { width: 22px; height: 22px; }
+  .icon-user { width: 26px; height: 26px; }
 }
