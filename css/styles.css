@@ -298,13 +298,15 @@ img { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-md);
 }
 .hero--bg {
-  background: url("../assets/img/consultoriaMarketing.jpg") center/cover no-repeat;
+  background: url("../assets/img/consultoriaMarketing.jpg") no-repeat center center;
+  background-size: cover;  /* hace que la imagen ocupe todo el ancho */
   position: relative;
-  color: #fff; /* texto blanco para contraste */
-  min-height: 80vh; /* ocupa gran parte de la pantalla */
+  color: #fff;
+  min-height: 80vh;
   display: flex;
   align-items: center;
 }
+
 
 .hero--bg::after {
   content: "";
