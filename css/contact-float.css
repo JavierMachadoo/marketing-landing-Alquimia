@@ -6,30 +6,44 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
+  animation: fadeInFloat 0.7s cubic-bezier(.33,1,.68,1) 0.2s backwards;
+}
+@keyframes fadeInFloat {
+  from { opacity: 0; transform: translateY(50px) scale(.8);}
+  to   { opacity: 1; transform: none;}
 }
 
 .contact-float-btn {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #6269d9;
-  box-shadow: 0 4px 16px rgba(98,105,217,0.17);
+  background: #02a99d;
+  box-shadow: 0 4px 16px rgba(2,169,157,0.17);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: box-shadow 0.2s;
   outline: none;
   padding: 0;
+  transition: 
+    box-shadow 0.28s cubic-bezier(.33,1,.68,1),
+    background 0.18s cubic-bezier(.33,1,.68,1),
+    transform 0.18s cubic-bezier(.33,1,.68,1);
+  will-change: transform, box-shadow;
 }
 .contact-float-btn svg {
   display: block;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  user-select: none;
 }
-
 .contact-float-btn:hover,
 .contact-float-btn:focus {
-  box-shadow: 0 6px 24px rgba(98,105,217,0.22);
+  background: #0b323c;
+  box-shadow: 0 8px 32px rgba(2,169,157,0.19);
+  transform: scale(1.08) translateY(-3px);
 }
 
 .contact-float-menu {
@@ -39,9 +53,12 @@
   margin-bottom: 10px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(16px) scale(0.97);
-  transition: opacity 0.25s, transform 0.25s;
+  transform: translateY(18px) scale(.97);
+  transition: 
+    opacity 0.32s cubic-bezier(.33,1,.68,1),
+    transform 0.27s cubic-bezier(.33,1,.68,1);
   align-items: flex-end;
+  will-change: transform, opacity;
 }
 .contact-float-menu.open {
   opacity: 1;
@@ -57,25 +74,44 @@
   border-radius: 24px;
   font-weight: 600;
   color: #fff;
-  background: #6269d9;
+  background: #02a99d;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.09);
   font-size: 1rem;
-  transition: background 0.2s, transform 0.15s;
-  opacity: 0.92;
+  opacity: 0.89;
   justify-content: flex-end;
+  border: none;
+  outline: none;
+  transform: translateY(18px) scale(.95);
+  transition:
+    background 0.15s cubic-bezier(.33,1,.68,1),
+    box-shadow 0.2s cubic-bezier(.33,1,.68,1),
+    opacity 0.22s cubic-bezier(.33,1,.68,1),
+    transform 0.22s cubic-bezier(.33,1,.68,1);
+  will-change: transform, opacity;
+}
+.contact-float-menu.open .contact-float-link {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeInLink 0.38s cubic-bezier(.33,1,.68,1) backwards;
 }
 .contact-float-link.whatsapp { background: #25D366; }
-.contact-float-link.email { background: #6269d9; }
-
+.contact-float-link.email { background: #0b323c; }
 .contact-float-link:hover, .contact-float-link:focus {
   opacity: 1;
-  background: #3d419b;
-  transform: translateY(-2px) scale(1.04);
+  background: #0b323c;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(2,169,157,0.10);
 }
 .contact-float-link.whatsapp:hover, .contact-float-link.whatsapp:focus {
   background: #1ebe57;
 }
+
+@keyframes fadeInLink {
+  from { opacity: 0; transform: translateY(24px) scale(.92);}
+  to   { opacity: 1; transform: none;}
+}
+
 @media (max-width: 600px) {
   .contact-float { right: 10px; bottom: 10px; }
   .contact-float-menu { min-width: 120px; }
