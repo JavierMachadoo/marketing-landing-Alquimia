@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alquimia Marketing — Consultoría</title>
-  <!-- Bootstrap CSS and Icons (solo para el resto de la web, el globito ya no lo usa) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact-float.css"> <!-- Botón flotante -->
 </head>
 <body id="top">
 
@@ -90,7 +88,7 @@
           <svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 34 34">
             <g>
               <rect fill="#0077B5" width="34" height="34" rx="6"/>
-              <path d="M10.1 27H5.8V13.6h4.3V27zM8 12c-1.4 0-2.3-.9-2.3-2.1 0-1.2.9-2.1 2.3-2.1S10.3 8.7 10.3 10c0 1.2-.9 2-2.3 2zm19.5 15h-4.2v-6.9c0-1.7-.6-2.9-2-2.9-1.1 0-1.7.8-2 1.6-.1.3-.1.7-.1 1.1V27h-4.2s.1-11.8 0-13h4.2v1.9c.6-.9 1.7-2.3 4.1-2.3 3 0 5.2 2 5.2 6.1V27z" fill="#fff"/>
+              <path d="M10.1 27H5.8V13.6h4.3V27zM8 12c-1.4 0-2.3-.9-2.3-2.1 0-1.2.9-2.1 2.3-2.1S10.3 8.7 10.3 10c0 1.2-.9 2-2.3 2zm19.5 15h-4.2v-6.9c0-1.7-.6-2.9-2-2.9-1.1 0-1.7.8-2 1.6-.1.3-.1.7-.1 1.1V27h-4.2s.1-15.2 0-16.8h4.2v2.4c.6-.9 1.6-2.2 4-2.2 2.9 0 5.1 1.9 5.1 6v10.6z" fill="#fff"/>
             </g>
           </svg>
           LinkedIn
@@ -159,33 +157,25 @@
     </div>
   </footer>
 
-  <!-- GLOBITO FLOTANTE -->
-  <div class="contact-fab" id="contactFab" aria-live="polite">
-    <button class="fab-btn" id="fabBtn" aria-label="Abrir opciones de contacto" aria-expanded="false">
-      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="12" fill="#0b323c"/>
-        <path d="M12 12c1.933 0 3.5-1.567 3.5-3.5S13.933 5 12 5s-3.5 1.567-3.5 3.5S10.067 12 12 12zm0 2c-2.33 0-7 1.167-7 3.5V20h14v-2.5c0-2.333-4.67-3.5-7-3.5z" fill="#fff"/>
-      </svg>
+  <!-- NUEVO BOTÓN FLOTANTE DE CONTACTO (esquina inferior izquierda) -->
+  <div class="contact-float">
+    <button class="contact-float-btn" id="openContactFloat" aria-label="Contacto">
+      <img src="assets/img/logoAlquimiaa.jpg" alt="Alquimia Contacto" />
     </button>
-    <div class="fab-options" id="fabOptions" aria-label="Opciones de contacto">
-      <a class="fab-link" href="https://wa.me/59812345678" target="_blank">
-        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#25D366" d="M12.001 2.002C6.477 2.002 2 6.477 2 12c0 1.921.509 3.726 1.472 5.312l-1.592 5.215 5.357-1.522A9.96 9.96 0 0 0 12.001 22c5.523 0 10-4.477 10-10s-4.477-9.998-9.999-9.998zm0 18.116a7.95 7.95 0 0 1-4.163-1.188l-.297-.178-3.18.905.904-3.099-.194-.326A7.96 7.96 0 0 1 4.001 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8.118-8 8.118z"/>
-        </svg>
-        <span>WhatsApp</span>
+    <div class="contact-float-menu" id="contactFloatMenu">
+      <a href="https://wa.me/59812345678" target="_blank" class="contact-float-link whatsapp" aria-label="WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.15-.198.297-.767.967-.941 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.521-.074-.148-.669-1.612-.916-2.204-.242-.581-.487-.502-.669-.511l-.571-.01a1.31 1.31 0 0 0-.949.443c-.325.326-1.24 1.214-1.24 2.958 0 1.744 1.27 3.428 1.447 3.667.177.238 2.5 3.82 6.033 5.215.842.289 1.498.462 2.01.591.844.215 1.613.185 2.22.112.677-.08 2.086-.853 2.379-1.677.294-.824.294-1.53.205-1.677-.09-.148-.33-.238-.677-.387z"/></svg>
+        WhatsApp
       </a>
-      <a class="fab-link" href="mailto:contacto@alquimia.com">
-        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#0072c6" d="M12 13.065 2 6.5V17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6.5l-10 6.565z"/>
-          <path fill="#0072c6" d="M22 5.5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2l10 6.5L22 5.5z"/>
-        </svg>
-        <span>Email</span>
+      <a href="mailto:contacto@alquimia.com" class="contact-float-link email" aria-label="Email">
+        <svg width="22" height="22" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#6269d9"/><path fill="#fff" d="M23 10H9c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 2v.5l-7 4.5-7-4.5V12h14zm0 8H9v-6.5l7 4.5 7-4.5V20z"/></svg>
+        Email
       </a>
     </div>
   </div>
+  <!-- FIN BOTÓN FLOTANTE DE CONTACTO -->
 
-  <!-- Bootstrap Bundle (para otros componentes de la web) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/contact-float.js"></script>
 </body>
 </html>
