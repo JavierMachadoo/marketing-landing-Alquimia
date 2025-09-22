@@ -222,4 +222,38 @@ img { max-width: 100%; height: auto; }
   min-width: 200px;
   font-size: 1rem;
 }
+/* CTA estilo card */
+.cta--final {
+  background: #f9f9f9;
+  padding: var(--space-6) 0;
+}
+
+.cta-box {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+}
+
+.cta-box p {
+  margin-bottom: var(--space-4);
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.cta-box .cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
 
