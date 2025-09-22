@@ -49,24 +49,57 @@ p{margin:0 0 var(--space-3)}
   background:#fff;border:2px solid var(--color-primary);padding:var(--space-2) var(--space-3);z-index:9999
 }
 
-/* Header */
-.site-header{
-  position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:saturate(180%) blur(10px);
-  border-bottom:1px solid var(--color-border);
+/* Header estilo Nexia */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 3px solid var(--color-primary); /* más grosor */
+  padding: 0 var(--space-4);
 }
-.header-inner{
-  display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);min-height:64px;
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* logo - nav - CTA */
+  align-items: center;
+  min-height: 80px; /* más alto */
+  gap: var(--space-4);
 }
-.brand{
-  display:flex;align-items:center;gap:var(--space-2);font-weight:700;color:var(--color-primary-700)
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  color: var(--color-primary-700);
+  font-size: 1.2rem;
 }
-.nav ul{display:flex;gap:var(--space-4)}
-.nav a{padding:8px 4px;border-radius:8px}
-.nav a:hover,.nav a:focus{background:var(--color-border)}
+.brand .logo {
+  height: 40px;
+  width: auto;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+}
+.nav a {
+  font-weight: 500;
+  padding: 10px 6px;
+  border-radius: 8px;
+  transition: color .2s ease, background-color .2s ease;
+}
+.nav a:hover,
+.nav a:focus {
+  background: var(--color-border);
+  color: var(--color-primary-700);
+}
+.btn--contact {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+}
 
-.header-cta .btn{padding:10px 16px}
-
-/* Botones */
+/* Botones generales */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:12px 20px;border-radius:999px;border:1px solid transparent;
@@ -173,6 +206,8 @@ p{margin:0 0 var(--space-3)}
 @media (max-width: 640px){
   .cards-grid,.testimonials-grid{grid-template-columns:1fr}
   .hero-actions{flex-direction:column;align-items:flex-start}
+  .header-inner{grid-template-columns: auto auto} /* logo + CTA arriba en mobile */
+  .nav{display:none} /* nav se puede ocultar por ahora */
 }
 
 /* Respeto por usuarios con motion reducido */
