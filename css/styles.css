@@ -23,6 +23,7 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   color: var(--color-text);
+  background: var(--color-bg);
 }
 a { color: var(--color-primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -30,51 +31,43 @@ img { max-width: 100%; height: auto; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 /* HEADER */
-/* HEADER */
 .site-header {
   background: #fff;
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 70px; /* alto fijo */
+  height: 70px;
 }
-
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
-
 .brand .logo {
-  height: 100%;      /* ocupa todo el alto del header */
-  max-height: 70px;  /* nunca más grande que el header */
-  width: auto;       /* mantiene proporción */
+  height: 100%;
+  max-height: 70px;
+  width: auto;
   display: block;
 }
-
 .nav {
   display: flex;
   gap: var(--space-5);
 }
-
 .nav a {
   text-decoration: none;
   color: var(--color-text);
   font-weight: 500;
   transition: color .2s ease;
 }
-
 .nav a:hover {
   color: var(--color-primary);
 }
-
 .header-cta .btn {
   font-size: 0.95rem;
   padding: var(--space-2) var(--space-4);
 }
-
 
 /* Hero */
 .hero {
@@ -92,17 +85,32 @@ img { max-width: 100%; height: auto; }
 .hero-actions { display: flex; gap: var(--space-3); margin-top: var(--space-3); }
 .hero-media img {
   width: 100%;
-  max-height: 400px;   /* ajustá según el alto que quieras */
-  object-fit: cover;   /* mantiene proporción y recorta si es necesario */
+  max-height: 400px;
+  object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
 }
-
 
 /* Section */
 .section { padding: var(--space-6) 0; }
 .section--alt { background: #f9f9f9; }
 .section-header { text-align: center; margin-bottom: var(--space-5); }
+
+/* SOBRE MÍ (nuevo fondo y colores) */
+.section--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+.section--accent .about-copy h2,
+.section--accent .about-copy,
+.section--accent .about-text,
+.section--accent .about-highlights,
+.section--accent .btn--linkedin {
+  color: #fff;
+}
+.section--accent .about-highlights li::before {
+  color: var(--color-primary);
+}
 
 /* Cards */
 .cards-grid {
@@ -123,6 +131,13 @@ img { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
+.section--accent .card,
+.section--accent .card:hover {
+  background: #193a47;
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
 
 /* About */
 .about-grid {
@@ -135,6 +150,10 @@ img { max-width: 100%; height: auto; }
 .about-highlights li::before {
   content: "✓ ";
   color: var(--color-primary);
+}
+.about-text {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-3);
 }
 
 /* Clients */
@@ -155,16 +174,7 @@ img { max-width: 100%; height: auto; }
 .client span { font-size: 0.9rem; color: var(--color-muted); }
 
 /* CTA */
-.cta .cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  justify-content: center;
-}
-.cta .btn {
-  min-width: 180px;
-  text-align: center;
-}
+/* (eliminada) */
 
 /* Footer */
 .site-footer {
@@ -177,10 +187,25 @@ img { max-width: 100%; height: auto; }
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 .footer-logo { max-height: 40px; }
 .footer-copy { font-size: 0.9rem; text-align: right; }
 .footer-logo-link { display: inline-block; }
+.footer-contacto {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.footer-contacto a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.footer-contacto a:hover {
+  color: var(--color-primary);
+}
 
 /* Buttons */
 .btn {
@@ -217,71 +242,11 @@ img { max-width: 100%; height: auto; }
 .btn, .btn:hover, .btn:focus {
   text-decoration: none;
 }
-/* Botones sin subrayado */
-.btn, .btn:hover, .btn:focus {
-  text-decoration: none;
-}
 
-/* CTA Final */
-.cta--final {
-  background: #f9f9f9;
-  text-align: center;
-  padding: var(--space-6) 0;
-}
-.cta--final h2 {
-  font-size: 2rem;
-  margin-bottom: var(--space-3);
-  color: var(--color-accent);
-}
-.cta--final p {
-  margin-bottom: var(--space-4);
-  font-size: 1.1rem;
-  color: var(--color-muted);
-}
-.cta--final .cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3);
-}
-.cta--final .btn {
-  min-width: 200px;
-  font-size: 1rem;
-}
 /* CTA estilo card */
-.cta--final {
-  background: #f9f9f9;
-  padding: var(--space-6) 0;
-}
+/* (eliminado) */
 
-.cta-box {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-6);
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.cta-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: var(--space-3);
-  color: var(--color-accent);
-}
-
-.cta-box p {
-  margin-bottom: var(--space-4);
-  color: var(--color-muted);
-  font-size: 1.05rem;
-}
-
-.cta-box .cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
+.cta-box { display: none; } /* Ocultamos cualquier caja de CTA residual */
 .about-media img {
   width: 100%;
   max-width: 350px;
@@ -290,7 +255,7 @@ img { max-width: 100%; height: auto; }
 }
 .hero--bg {
   background: url("../assets/img/consultoriaMarketing.jpg") no-repeat center center;
-  background-size: cover;  /* hace que la imagen ocupe todo el ancho */
+  background-size: cover;
   position: relative;
   color: #fff;
   min-height: 80vh;
@@ -298,16 +263,15 @@ img { max-width: 100%; height: auto; }
   align-items: center;
 }
 
-
 .hero--bg::after {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(11, 50, 60, 0.55); /* overlay oscuro con tu color institucional */
+  background: rgba(11, 50, 60, 0.55);
 }
 
 .hero-inner {
-  position: relative; /* para que el texto quede arriba del overlay */
+  position: relative;
   max-width: 700px;
   text-align: left;
   z-index: 1;
@@ -319,29 +283,32 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero--bg h1 span {
-  color: var(--color-primary); /* resalta "Alquimia Marketing" */
+  color: var(--color-primary);
 }
 
 .hero--bg p {
   font-size: 1.2rem;
   margin-bottom: var(--space-4);
-  color: #eee; /* gris claro, legible sobre fondo */
+  color: #eee;
 }
-#servicios, #sobremi, #testimonios, #clientes, #contacto {
-  scroll-margin-top: 70px; /* Ajusta según tu header */
+#servicios, #sobremi, #testimonios, #clientes, #footer-contacto {
+  scroll-margin-top: 70px;
 }
+
+/* ---- MENÚ FLOTANTE DE CONTACTO (actualizado) ---- */
 .floating-menu {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 0;
+  right: 0;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 18px 18px;
 }
 
 .floating-btn {
-  background: var(--color-accent); /* fondo color institucional */
+  background: var(--color-accent);
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -361,14 +328,14 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 6px 24px rgba(0,0,0,0.22);
 }
 
-/* Opciones flotantes ocultas por defecto (abren para arriba) */
+/* Opciones flotantes ocultas por defecto (abren hacia arriba) */
 .floating-options {
   opacity: 0;
   pointer-events: none;
   margin-bottom: 10px;
   transition: opacity 0.25s;
   display: flex;
-  flex-direction: column-reverse; /* Cambia el orden para que abran hacia arriba */
+  flex-direction: column-reverse;
   gap: 12px;
 }
 
@@ -406,10 +373,22 @@ img { max-width: 100%; height: auto; }
   transform: scale(1.1);
 }
 
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    text-align: center;
+  }
+  .about-media img {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 600px) {
   .floating-menu {
-    bottom: 18px;
-    right: 18px;
+    bottom: 0;
+    right: 0;
+    padding: 10px 10px;
   }
   .floating-btn {
     width: 48px;
@@ -420,6 +399,11 @@ img { max-width: 100%; height: auto; }
     width: 40px;
     height: 40px;
     font-size: 18px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: flex-start;
   }
 }
 
