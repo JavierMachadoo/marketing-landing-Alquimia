@@ -330,7 +330,6 @@ img { max-width: 100%; height: auto; }
 #servicios, #sobremi, #testimonios, #clientes, #contacto {
   scroll-margin-top: 70px; /* Ajusta según tu header */
 }
-/* ---- MENÚ FLOTANTE DE CONTACTO ---- */
 .floating-menu {
   position: fixed;
   bottom: 32px;
@@ -342,7 +341,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .floating-btn {
-  background: #25d366;
+  background: var(--color-accent); /* fondo color institucional */
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -362,14 +361,14 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 6px 24px rgba(0,0,0,0.22);
 }
 
-/* Opciones flotantes ocultas por defecto */
+/* Opciones flotantes ocultas por defecto (abren para arriba) */
 .floating-options {
   opacity: 0;
   pointer-events: none;
   margin-bottom: 10px;
   transition: opacity 0.25s;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse; /* Cambia el orden para que abran hacia arriba */
   gap: 12px;
 }
 
@@ -407,7 +406,6 @@ img { max-width: 100%; height: auto; }
   transform: scale(1.1);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .floating-menu {
     bottom: 18px;
@@ -425,12 +423,12 @@ img { max-width: 100%; height: auto; }
   }
 }
 
-/* ---- BOTÓN DE LINKEDIN ---- */
+/* ---- BOTÓN DE LINKEDIN (logo oficial) ---- */
 .btn--linkedin {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: #0072c6;
+  background: #0077b5;
   color: #fff !important;
   border-radius: 5px;
   padding: 9px 18px;
