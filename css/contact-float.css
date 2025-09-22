@@ -17,8 +17,8 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #0b323c;
-  border: 2px solid #02a99d;
+  background: var(--color-primary, #02a99d);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,13 +26,12 @@
   outline: none;
   padding: 0;
   box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
-  transition: box-shadow 0.27s cubic-bezier(.33,1,.68,1), background 0.18s cubic-bezier(.33,1,.68,1), border 0.18s cubic-bezier(.33,1,.68,1), transform 0.17s cubic-bezier(.33,1,.68,1);
+  transition: box-shadow 0.27s cubic-bezier(.33,1,.68,1), background 0.18s cubic-bezier(.33,1,.68,1), transform 0.17s cubic-bezier(.33,1,.68,1);
   will-change: transform, box-shadow;
 }
 .contact-float-btn:hover,
 .contact-float-btn:focus {
-  background: #02a99d;
-  border: 2px solid #0b323c;
+  background: #0b323c;
   box-shadow: 0 10px 32px rgba(2,169,157,0.14);
   transform: scale(1.09) translateY(-2px);
 }
@@ -70,36 +69,33 @@
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 2px 8px rgba(2,169,157,0.09);
-  border: 2px solid #e0e0e0;
+  border: none;
   font-size: 1rem;
-  transition: background 0.15s cubic-bezier(.33,1,.68,1), border 0.15s cubic-bezier(.33,1,.68,1), box-shadow 0.19s cubic-bezier(.33,1,.68,1), transform 0.19s cubic-bezier(.33,1,.68,1);
+  transition: background 0.15s cubic-bezier(.33,1,.68,1), box-shadow 0.19s cubic-bezier(.33,1,.68,1), transform 0.19s cubic-bezier(.33,1,.68,1);
   will-change: transform, opacity;
   color: #0b323c;
   opacity: 0.96;
   outline: none;
 }
 .contact-float-link.whatsapp {
-  border-color: #25D366;
+  background: #25D366;
 }
 .contact-float-link.email {
-  border-color: #0b323c;
+  background: #fff;
 }
 .contact-float-link:hover,
 .contact-float-link:focus {
   background: #02a99d;
-  border-color: #0b323c;
   box-shadow: 0 8px 24px rgba(2,169,157,0.13);
   transform: scale(1.12) translateY(-2px);
 }
 .contact-float-link.whatsapp:hover,
 .contact-float-link.whatsapp:focus {
-  background: #25D366;
-  border-color: #02a99d;
+  background: #128c7e;
 }
 .contact-float-link.email:hover,
 .contact-float-link.email:focus {
-  background: #0b323c;
-  border-color: #02a99d;
+  background: #e0f7f4;
 }
 .contact-float-link:active {
   transform: scale(0.96);
