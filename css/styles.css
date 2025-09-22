@@ -30,37 +30,28 @@ img { max-width: 100%; height: auto; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 /* HEADER */
+/* HEADER */
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 var(--space-5);   /* sacamos padding vertical para que el logo mande */
   background: #fff;
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 70px; /* alto fijo del header */
+  height: 70px; /* alto fijo */
 }
 
-.header-logo {
+.header-inner {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: space-between;
+  height: 100%;
 }
 
-.site-header .logo {
-  height: 100%;      /* el logo ocupa el alto del header */
+.brand .logo {
+  height: 100%;      /* ocupa todo el alto del header */
   max-height: 70px;  /* nunca más grande que el header */
   width: auto;       /* mantiene proporción */
   display: block;
-}
-
-.header-logo span {
-  font-size: 1.6rem;   /* más grande que el default */
-  font-weight: 700;
-  color: var(--color-dark);
-  white-space: nowrap;
 }
 
 .nav {
@@ -70,7 +61,7 @@ img { max-width: 100%; height: auto; }
 
 .nav a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-text);
   font-weight: 500;
   transition: color .2s ease;
 }
@@ -79,15 +70,11 @@ img { max-width: 100%; height: auto; }
   color: var(--color-primary);
 }
 
-/* Botón de contacto en header */
-.header-cta {
-  margin-left: auto;
-}
-
 .header-cta .btn {
   font-size: 0.95rem;
   padding: var(--space-2) var(--space-4);
 }
+
 
 /* Hero */
 .hero {
