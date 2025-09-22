@@ -577,5 +577,6 @@ img { max-width: 100%; height: auto; }
   align-items: stretch;
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
-  justify-content: center; /* <--- Esto centra la última fila */
+  justify-content: center; 
+  place-content: center; 
 }
