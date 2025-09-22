@@ -37,8 +37,8 @@
   transform: scale(1.09) translateY(-2px);
 }
 .icon-user {
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
   display: block;
   object-fit: contain;
 }
@@ -125,5 +125,5 @@
   .contact-float-menu { gap: 8px; }
   .contact-float-link { width: 43px; height: 43px; }
   .icon-contact { width: 22px; height: 22px; }
-  .icon-user { width: 26px; height: 26px; }
+  .icon-user { width: 18px; height: 18px; }
 }
