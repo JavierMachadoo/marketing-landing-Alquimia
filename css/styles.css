@@ -30,7 +30,6 @@ a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-/* HEADER */
 .site-header {
   background: #fff;
   box-shadow: var(--shadow-sm);
@@ -69,7 +68,6 @@ img { max-width: 100%; height: auto; }
   padding: var(--space-2) var(--space-4);
 }
 
-/* Hero */
 .hero {
   padding: var(--space-6) 0;
   display: flex;
@@ -91,32 +89,32 @@ img { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-md);
 }
 
-/* Section */
 .section { padding: var(--space-6) 0; }
 .section--alt { background: #f9f9f9; }
 .section-header { text-align: center; margin-bottom: var(--space-5); }
 
-/* SOBRE MÍ (nuevo fondo y colores) */
-.section--accent {
-  background: var(--color-accent);
-  color: #fff;
+/* --- Detalles de acento institucional --- */
+.section-title-accent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--color-accent) 70%, var(--color-primary) 100%);
 }
-.section--accent .about-copy h2,
-.section--accent .about-copy,
-.section--accent .about-text,
-.section--accent .about-highlights,
-.section--accent .btn--linkedin {
-  color: #fff;
-}
-.section--accent .about-highlights li::before {
-  color: var(--color-primary);
+.section-title-accent--big {
+  width: 36px;
+  height: 10px;
 }
 
-/* Cards */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-4);
+.card-accent-bar {
+  height: 6px;
+  width: 38px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--color-primary) 65%, var(--color-accent));
+  opacity: 0.9;
 }
 .card {
   background:#fff;
@@ -131,22 +129,14 @@ img { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
-.section--accent .card,
-.section--accent .card:hover {
-  background: #193a47;
-  color: #fff;
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
-}
 
-/* About */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-6);
   align-items: center;
 }
-.about-highlights { list-style: none; padding: 0; }
+.about-highlights { list-style: none; padding: 0; margin-bottom: 0;}
 .about-highlights li::before {
   content: "✓ ";
   color: var(--color-primary);
@@ -156,7 +146,19 @@ img { max-width: 100%; height: auto; }
   margin-bottom: var(--space-3);
 }
 
-/* Clients */
+.about-title-accent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--color-primary) 60%, var(--color-accent) 100%);
+  margin-bottom: 3px;
+}
+
+.section--white { background: #fff; color: var(--color-text); }
+
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -173,10 +175,6 @@ img { max-width: 100%; height: auto; }
 .client img:hover { filter: grayscale(0%); }
 .client span { font-size: 0.9rem; color: var(--color-muted); }
 
-/* CTA */
-/* (eliminada) */
-
-/* Footer */
 .site-footer {
   background: var(--color-accent);
   color: #fff;
@@ -207,7 +205,6 @@ img { max-width: 100%; height: auto; }
   color: var(--color-primary);
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   padding: var(--space-3) var(--space-5);
@@ -226,7 +223,6 @@ img { max-width: 100%; height: auto; }
 }
 .btn--ghost:hover { background: var(--color-primary); color: #fff; }
 
-/* Animaciones reveal */
 [data-reveal] { opacity: 0; }
 [data-reveal].revealed { opacity: 1; transform: none; }
 [data-reveal="fade-up"] {
@@ -243,10 +239,6 @@ img { max-width: 100%; height: auto; }
   text-decoration: none;
 }
 
-/* CTA estilo card */
-/* (eliminado) */
-
-.cta-box { display: none; } /* Ocultamos cualquier caja de CTA residual */
 .about-media img {
   width: 100%;
   max-width: 350px;
@@ -262,30 +254,25 @@ img { max-width: 100%; height: auto; }
   display: flex;
   align-items: center;
 }
-
 .hero--bg::after {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(11, 50, 60, 0.55);
 }
-
 .hero-inner {
   position: relative;
   max-width: 700px;
   text-align: left;
   z-index: 1;
 }
-
 .hero--bg h1 {
   font-size: 2.5rem;
   margin-bottom: var(--space-3);
 }
-
 .hero--bg h1 span {
   color: var(--color-primary);
 }
-
 .hero--bg p {
   font-size: 1.2rem;
   margin-bottom: var(--space-4);
@@ -295,7 +282,6 @@ img { max-width: 100%; height: auto; }
   scroll-margin-top: 70px;
 }
 
-/* ---- MENÚ FLOTANTE DE CONTACTO (actualizado) ---- */
 .floating-menu {
   position: fixed;
   bottom: 0;
@@ -304,7 +290,7 @@ img { max-width: 100%; height: auto; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 18px 18px;
+  padding: 0 0;
 }
 
 .floating-btn {
@@ -388,7 +374,7 @@ img { max-width: 100%; height: auto; }
   .floating-menu {
     bottom: 0;
     right: 0;
-    padding: 10px 10px;
+    padding: 0 0;
   }
   .floating-btn {
     width: 48px;
@@ -424,13 +410,11 @@ img { max-width: 100%; height: auto; }
   margin-top: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
-
 .btn--linkedin:hover {
   background: #005b99;
   color: #fff !important;
   text-decoration: none;
 }
-
 .icon-linkedin {
   vertical-align: middle;
   margin-right: 2px;
