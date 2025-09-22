@@ -30,6 +30,7 @@ a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
+/* HEADER */
 .site-header {
   background: #fff;
   box-shadow: var(--shadow-sm);
@@ -68,6 +69,7 @@ img { max-width: 100%; height: auto; }
   padding: var(--space-2) var(--space-4);
 }
 
+/* Hero */
 .hero {
   padding: var(--space-6) 0;
   display: flex;
@@ -282,6 +284,7 @@ img { max-width: 100%; height: auto; }
   scroll-margin-top: 70px;
 }
 
+/* --- Menú flotante de contacto --- */
 .floating-menu {
   position: fixed;
   bottom: 0;
@@ -290,7 +293,7 @@ img { max-width: 100%; height: auto; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0 0;
+  padding: 0;
 }
 
 .floating-btn {
@@ -314,7 +317,7 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 6px 24px rgba(0,0,0,0.22);
 }
 
-/* Opciones flotantes ocultas por defecto (abren hacia arriba) */
+/* Opciones flotantes ocultas por defecto (salen para ARRIBA) */
 .floating-options {
   opacity: 0;
   pointer-events: none;
@@ -330,7 +333,6 @@ img { max-width: 100%; height: auto; }
   pointer-events: auto;
 }
 
-/* Estilos de los links flotantes */
 .floating-link {
   display: flex;
   align-items: center;
@@ -374,7 +376,7 @@ img { max-width: 100%; height: auto; }
   .floating-menu {
     bottom: 0;
     right: 0;
-    padding: 0 0;
+    padding: 0;
   }
   .floating-btn {
     width: 48px;
