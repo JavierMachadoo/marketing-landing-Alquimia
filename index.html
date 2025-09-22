@@ -3,13 +3,205 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Alquimia Marketing — Landing Page</title>
+  <title>Consultoría de Marketing — Juan Machado</title>
+  <meta name="description" content="Consultor de marketing para pymes y profesionales: estrategia, performance y marca. Resultados claros, medibles y sostenibles." />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:opsz@9..40&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicons (colocá tus archivos en /assets/favicons/) -->
+  <link rel="icon" href="assets/favicons/favicon.ico" />
+
+  <!-- Meta social básica -->
+  <meta property="og:title" content="Consultoría de Marketing — Juan Machado">
+  <meta property="og:description" content="Estrategia y ejecución, sin humo.">
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <h1>Bienvenido a Alquimia Marketing</h1>
-  <p>Próximamente: landing page profesional.</p>
+  <!-- Link para saltar a contenido (accesibilidad) -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <script src="js/main.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Inicio">
+        <!-- Puedes reemplazar por tu logo -->
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="currentColor"></circle>
+        </svg>
+        <span>Juan Machado</span>
+      </a>
+
+      <nav class="nav" aria-label="Primaria">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobremi">Sobre mí</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn--primary" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid" data-reveal>
+        <div class="hero-copy">
+          <h1 id="hero-title">Marketing claro. Resultados medibles.</h1>
+          <p>Ayudo a pymes y profesionales a crear estrategias que convierten: adquisición, marca y performance alineados al negocio.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#contacto">Agenda una consulta</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <ul class="hero-bullets">
+            <li>✔ Diagnóstico en 7 días</li>
+            <li>✔ Plan trimestral accionable</li>
+            <li>✔ Acompañamiento semanal</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <img src="assets/img/hero-illustration.webp" alt="Estrategia de marketing con gráficos de crecimiento" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <h2 id="services-title">Servicios</h2>
+          <p>Paquetes claros para acelerar tu crecimiento sin complejidad innecesaria.</p>
+        </header>
+
+        <div class="cards-grid">
+          <article class="card" data-reveal>
+            <h3>Estrategia & Plan</h3>
+            <p>Auditoría de canales, definición de objetivos y roadmap trimestral priorizado.</p>
+            <ul class="checklist">
+              <li>OKRs de marketing</li>
+              <li>Mapa de canales</li>
+              <li>Calendario de ejecución</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal>
+            <h3>Performance</h3>
+            <p>Campañas de adquisición (Google/Meta/LinkedIn) con foco en CAC y ROAS.</p>
+            <ul class="checklist">
+              <li>Tracking limpio</li>
+              <li>Creatividades iterativas</li>
+              <li>Informes semanales</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal>
+            <h3>Marca & Contenido</h3>
+            <p>Posicionamiento, tono y calendario editorial para construir autoridad.</p>
+            <ul class="checklist">
+              <li>Guía de marca</li>
+              <li>Blog/newsletter</li>
+              <li>Social con propósito</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobremi" class="section section--alt" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <img src="assets/img/portrait.webp" alt="Juan Machado, consultor de marketing" loading="lazy">
+        </div>
+        <div class="about-copy" data-reveal>
+          <h2 id="about-title">Sobre mí</h2>
+          <p>15+ años impulsando el crecimiento de negocios en LATAM. Combino estrategia y ejecución: lo que no se puede medir, no se puede mejorar.</p>
+          <ul class="about-highlights">
+            <li>Ex Director de Marketing en pymes tech</li>
+            <li>Especialista en performance & marca</li>
+            <li>Formación en analítica y CRO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <h2 id="testimonials-title">Testimonios</h2>
+          <p>Lo que dicen quienes ya trabajan conmigo.</p>
+        </header>
+
+        <div class="testimonials-grid">
+          <figure class="testimonial" data-reveal>
+            <blockquote>“Pasamos de suposiciones a un plan con métricas claras. Crecimos 38% en leads calificados en 90 días.”</blockquote>
+            <figcaption>
+              <img src="assets/img/avatars/ava1.webp" alt="" loading="lazy">
+              <span><strong>María Pérez</strong> — Directora, Estudio MP</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial" data-reveal>
+            <blockquote>“Ordenó nuestros canales y bajó el CAC un 22%. Reportes que entendemos todos.”</blockquote>
+            <figcaption>
+              <img src="assets/img/avatars/ava2.webp" alt="" loading="lazy">
+              <span><strong>Carlos Díaz</strong> — CEO, AgroTech</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial" data-reveal>
+            <blockquote>“Contenido con intención: de 0 a 2k suscriptores en 4 meses, sin perder foco comercial.”</blockquote>
+            <figcaption>
+              <img src="assets/img/avatars/ava3.webp" alt="" loading="lazy">
+              <span><strong>Lucía Gómez</strong> — Fundadora, StudioL</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA CONTACTO -->
+    <section id="contacto" class="cta" aria-labelledby="cta-title">
+      <div class="container cta-inner" data-reveal>
+        <h2 id="cta-title">¿Listos para crecer?</h2>
+        <p>Contame tu contexto y armamos el primer diagnóstico sin costo.</p>
+        <div class="cta-actions">
+          <a class="btn btn--accent" href="mailto:contacto@tu-dominio.com?subject=Consulta%20de%20marketing">Escribime por mail</a>
+          <a class="btn btn--ghost" href="https://wa.me/59800000000" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-min">JM</span>
+        <p>Consultoría de Marketing • Montevideo, UY</p>
+      </div>
+      <nav class="footer-nav" aria-label="Secundaria">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobremi">Sobre mí</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-copy">
+        <small>© <span id="year"></span> Juan Machado. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
