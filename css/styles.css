@@ -284,78 +284,6 @@ img { max-width: 100%; height: auto; }
   scroll-margin-top: 70px;
 }
 
-/* --- Menú flotante de contacto --- */
-.floating-menu {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.floating-btn {
-  background: var(--color-accent);
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 32px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.floating-btn:hover {
-  transform: scale(1.07);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
-}
-
-/* Opciones que se abren hacia arriba */
-.floating-options {
-  opacity: 0;
-  pointer-events: none;
-  margin-bottom: 12px;
-  transition: opacity 0.25s, transform 0.25s;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 12px;
-  transform: translateY(10px);
-}
-
-.floating-menu.open .floating-options {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.floating-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.16);
-  font-size: 22px;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.floating-link.whatsapp { color: #25d366; }
-.floating-link.email { color: #0072c6; }
-
-.floating-link:hover {
-  background: #f9f9f9;
-  transform: scale(1.1);
-}
-
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -368,16 +296,6 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (max-width: 600px) {
-  .floating-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 23px;
-  }
-  .floating-link {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
   .footer-bottom {
     flex-direction: column;
     gap: 0.6rem;
