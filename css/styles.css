@@ -401,3 +401,75 @@ img { max-width: 100%; height: auto; }
     border-radius: 12px;
   }
 }
+/* GLOBITO FLOTANTE ESTÉTICO */
+.globito-btn {
+  background: #02a99d !important;      /* Color institucional */
+  color: #fff !important;
+  border: none;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 6px 22px rgba(2,169,157,0.18), 0 1.5px 6px rgba(11,50,60,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.2s;
+}
+.globito-btn:hover, .globito-btn:focus {
+  background: #0b323c !important;
+  color: #fff !important;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 26px rgba(2,169,157,0.24), 0 2px 8px rgba(11,50,60,0.13);
+}
+
+.globito-menu {
+  min-width: 170px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 0.5rem 0;
+  margin-bottom: 8px !important;
+  transform: translateY(10px) scale(0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(.39,.58,.57,1.15);
+}
+.dropup.show .globito-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.globito-link {
+  color: #222 !important;
+  text-decoration: none !important;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: background 0.17s, color 0.17s;
+  padding: 0.7rem 1rem 0.7rem 1.1rem;
+}
+.globito-link:hover, .globito-link:focus {
+  background: #e7fcf8 !important;
+  color: #02a99d !important;
+}
+
+.globito-icon-wpp {
+  font-size: 1.28em;
+  color: #25d366;
+}
+.globito-icon-mail {
+  font-size: 1.18em;
+  color: #0072c6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .globito-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+  .globito-menu {
+    min-width: 130px;
+    font-size: 0.95em;
+    border-radius: 12px;
+  }
+}
