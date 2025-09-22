@@ -328,6 +328,6 @@ img { max-width: 100%; height: auto; }
   color: #eee; /* gris claro, legible sobre fondo */
 }
 #servicios, #sobremi, #testimonios, #clientes, #contacto {
-  scroll-margin-top: 80px; /* Ajusta según tu header */
+  scroll-margin-top: 70px; /* Ajusta según tu header */
 }
 
