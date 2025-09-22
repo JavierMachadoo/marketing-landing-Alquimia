@@ -1,6 +1,6 @@
 # marketing-landing-Alquimia
 
-[![Deploy to GitHub Pages](https://github.com/<JavierMachadoo>/marketing-landing-Alquimia/actions/workflows/deploy.yml/badge.svg)](https://github.com/<JavierMachadoo>/marketing-landing-Alquimia/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/<javiermachadoo>/marketing-landing-Alquimia/actions/workflows/deploy.yml/badge.svg)](https://github.com/<javiermachadoo>/marketing-landing-Alquimia/actions/workflows/deploy.yml)
 
 👉 **Landing online:** https://javiermachadoo.github.io/marketing-landing-Alquimia/#
 
