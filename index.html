@@ -88,7 +88,7 @@
           <svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 34 34">
             <g>
               <rect fill="#0077B5" width="34" height="34" rx="6"/>
-              <path d="M10.1 27H5.8V13.6h4.3V27zM8 12c-1.4 0-2.3-.9-2.3-2.1 0-1.2.9-2.1 2.3-2.1S10.3 8.7 10.3 10c0 1.2-.9 2-2.3 2zm19.5 15h-4.2v-6.9c0-1.7-.6-2.9-2-2.9-1.1 0-1.7.8-2 1.6-.1.3-.1.7-.1 1.1V27h-4.2s.1-15.2 0-16.8h4.2v2.4c.6-.9 1.6-2.2 4-2.2 2.9 0 5.1 1.9 5.1 6v10.6z" fill="#fff"/>
+              <path d="M10.1 27H5.8V13.6h4.3V27zM8 12c-1.4 0-2.3-.9-2.3-2.1 0-1.2.9-2.1 2.3-2.1S10.3 8.7 10.3 10c0 1.2-.9 2-2.3 2zm19.5 15h-4.2v-6.9c0-1.7-.6-2.9-2-2.9-1.1 0-1.7.8-2 1.6-.1.3-.1.7-.1 1[...]
             </g>
           </svg>
           LinkedIn
@@ -130,10 +130,11 @@
     </header>
     <div class="clients-grid clients-grid--all">
       <!-- Ejemplo: Cambia href por la web de cada cliente si la sabes, si no, deja solo el # -->
-       <a class="client" href="#" target="_blank" data-reveal="fade-up">
+      <a class="client" href="#" target="_blank" data-reveal="fade-up">
         <img src="assets/img/itau.png" alt="AFAP Itaú">
         <span>AFAP Itaú</span>
-        <a class="client" href="#" target="_blank" data-reveal="fade-up">
+      </a>
+      <a class="client" href="#" target="_blank" data-reveal="fade-up">
         <img src="assets/img/moura.png" alt="Moura">
         <span>Moura</span>
       </a>
@@ -232,32 +233,33 @@
     </div>
   </footer>
 
-  <!-- Botón flotante (coloca esto donde ya lo tienes) -->
-<div class="contact-float">
-  <button class="contact-float-btn" id="openContactFloat" aria-label="Contacto">
-    <!-- Ícono user SVG genérico, minimalista y de color institucional -->
-    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-      <circle cx="17" cy="17" r="17" fill="#02a99d"/>
-      <circle cx="17" cy="13.5" r="5" fill="#fff"/>
-      <ellipse cx="17" cy="23.5" rx="8.2" ry="4.5" fill="#fff"/>
-      <circle cx="17" cy="13.5" r="3.1" fill="#02a99d"/>
-    </svg>
-  </button>
-  <div class="contact-float-menu" id="contactFloatMenu">
-    <a href="https://wa.me/59812345678" target="_blank" class="contact-float-link whatsapp" aria-label="WhatsApp">
-      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.15-.198.297-.767.967-.941 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.521-.074-.148-.669-1.612-.916-2.204-.242-.581-.487-.502-.669-.511l-.571-.01a1.31 1.31 0 0 0-.949.443c-.325.326-1.24 1.214-1.24 2.958 0 1.744 1.27 3.428 1.447 3.667.177.238 2.5 3.82 6.033 5.215.842.289 1.498.462 2.01.591.844.215 1.613.185 2.22.112.677-.08 2.086-.853 2.379-1.677.294-.824.294-1.53.205-1.677-.09-.148-.33-.238-.677-.387z"/></svg>
-      WhatsApp
-    </a>
-    <a href="mailto:smachado@alquimiaconsultores.com.uy" class="contact-float-link email" aria-label="Email">
-      <svg width="22" height="22" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#0b323c"/><path fill="#fff" d="M23 10H9c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 2v.5l-7 4.5-7-4.5V12h14zm0 8H9v-6.5l7 4.5 7-4.5V20z"/></svg>
-      Email
-    </a>
+  <!-- BOTÓN FLOTANTE MEJORADO -->
+  <div class="contact-float">
+    <button class="contact-float-btn" id="openContactFloat" aria-label="Contactar a Santiago Machado" aria-expanded="false">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="16" fill="#fff"/>
+        <path d="M16,9a4,4,0,1,1-4,4A4,4,0,0,1,16,9Zm0,10c-3.31,0-6,1.79-6,4v1a1,1,0,0,0,1,1h10a1,1,0,0,0,1-1v-1C22,20.79,19.31,19,16,19Z" fill="#02a99d"/>
+      </svg>
+    </button>
+    <div class="contact-float-menu" id="contactFloatMenu" role="menu" aria-label="Opciones de contacto">
+      <a href="https://wa.me/59894005497" target="_blank" class="contact-float-link whatsapp" aria-label="WhatsApp a Santiago Machado" role="menuitem" rel="noopener">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#25D366"/>
+          <path fill="#fff" d="M23.5 20.74c-.33-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.17s-.85 1.06-1.04 1.28c-.18.21-.34.23-.63.08-.29-.16-1.23-.45-2.36-1.42-.87-.76-1.46-1.7-1.63-1.99-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.21.05-.38-.01-.54-.07-.16-.74-1.77-1.01-2.41-.26-.63-.53-.55-.73-.56-.19-.01-.41-.01-.63-.01s-.59.08-.89.38c-.31.3-1.17 1.14-1.17 2.78 0 1.64 1.19 3.23 2.65 4.43 1.67 1.38 3.22 1.42 3.62 1.35.4-.07 1.12-.46 1.28-.91.16-.46.16-.86.13-.92z"/>
+        </svg>
+      </a>
+      <a href="mailto:smachado@alquimiaconsultores.com.uy" class="contact-float-link email" aria-label="Enviar mail a Santiago Machado" role="menuitem">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#0b323c"/>
+          <path fill="#fff" d="M8 12c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2zm2-.2V20h12v-8.2l-6 4.5-6-4.5zm1.2-1.8l6.3 4.7a1 1 0 0 0 1 0l6.3-4.7c-.18-.13-.4-.2-.6-.2H10c-.2 0-.42.07-.6.2z"/>
+        </svg>
+      </a>
+    </div>
   </div>
-</div>
-<!-- FIN BOTÓN FLOTANTE -->
+  <!-- FIN BOTÓN FLOTANTE MEJORADO -->
 
-<!-- ...scripts al final del body... -->
-<script src="js/main.js"></script>
-<script src="js/contact-float.js"></script>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact-float.js"></script>
 </body>
 </html>

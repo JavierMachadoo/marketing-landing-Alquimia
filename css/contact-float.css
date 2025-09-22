@@ -17,9 +17,9 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #02a99d;
-  box-shadow: 0 4px 16px rgba(2,169,157,0.17);
-  border: none;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
+  border: 2px solid #02a99d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,93 +27,104 @@
   outline: none;
   padding: 0;
   transition: 
-    box-shadow 0.28s cubic-bezier(.33,1,.68,1),
+    box-shadow 0.27s cubic-bezier(.33,1,.68,1),
     background 0.18s cubic-bezier(.33,1,.68,1),
-    transform 0.18s cubic-bezier(.33,1,.68,1);
+    border 0.18s cubic-bezier(.33,1,.68,1),
+    transform 0.17s cubic-bezier(.33,1,.68,1);
   will-change: transform, box-shadow;
 }
 .contact-float-btn svg {
+  width: 32px;
+  height: 32px;
   display: block;
-  width: 34px;
-  height: 34px;
-  pointer-events: none;
-  user-select: none;
 }
 .contact-float-btn:hover,
 .contact-float-btn:focus {
-  background: #0b323c;
-  box-shadow: 0 8px 32px rgba(2,169,157,0.19);
-  transform: scale(1.08) translateY(-3px);
+  background: #02a99d;
+  border: 2px solid #0b323c;
+  box-shadow: 0 10px 32px rgba(2,169,157,0.14);
+  transform: scale(1.09) translateY(-2px);
+}
+.contact-float-btn:hover svg path,
+.contact-float-btn:focus svg path {
+  fill: #fff;
 }
 
 .contact-float-menu {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(18px) scale(.97);
+  transform: translateY(24px) scale(.96);
   transition: 
     opacity 0.32s cubic-bezier(.33,1,.68,1),
-    transform 0.27s cubic-bezier(.33,1,.68,1);
+    transform 0.22s cubic-bezier(.33,1,.68,1);
   align-items: flex-end;
   will-change: transform, opacity;
+  filter: drop-shadow(0 4px 16px rgba(11,50,60,0.10));
 }
 .contact-float-menu.open {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1.03);
 }
 .contact-float-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-  min-width: 140px;
-  padding: 10px 20px;
-  border-radius: 24px;
-  font-weight: 600;
-  color: #fff;
-  background: #02a99d;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(2,169,157,0.09);
+  border: 2px solid #e0e0e0;
   font-size: 1rem;
-  opacity: 0.89;
-  justify-content: flex-end;
-  border: none;
-  outline: none;
-  transform: translateY(18px) scale(.95);
   transition:
     background 0.15s cubic-bezier(.33,1,.68,1),
-    box-shadow 0.2s cubic-bezier(.33,1,.68,1),
-    opacity 0.22s cubic-bezier(.33,1,.68,1),
-    transform 0.22s cubic-bezier(.33,1,.68,1);
+    border 0.15s cubic-bezier(.33,1,.68,1),
+    box-shadow 0.19s cubic-bezier(.33,1,.68,1),
+    transform 0.19s cubic-bezier(.33,1,.68,1);
   will-change: transform, opacity;
+  color: #0b323c;
+  opacity: 0.96;
+  outline: none;
 }
-.contact-float-menu.open .contact-float-link {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  animation: fadeInLink 0.38s cubic-bezier(.33,1,.68,1) backwards;
+.contact-float-link svg {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
-.contact-float-link.whatsapp { background: #25D366; }
-.contact-float-link.email { background: #0b323c; }
-.contact-float-link:hover, .contact-float-link:focus {
-  opacity: 1;
+.contact-float-link.whatsapp {
+  border-color: #25D366;
+}
+.contact-float-link.email {
+  border-color: #0b323c;
+}
+.contact-float-link:hover,
+.contact-float-link:focus {
+  background: #02a99d;
+  border-color: #0b323c;
+  box-shadow: 0 8px 24px rgba(2,169,157,0.13);
+  transform: scale(1.12) translateY(-2px);
+}
+.contact-float-link.whatsapp:hover,
+.contact-float-link.whatsapp:focus {
+  background: #25D366;
+  border-color: #02a99d;
+}
+.contact-float-link.email:hover,
+.contact-float-link.email:focus {
   background: #0b323c;
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 16px rgba(2,169,157,0.10);
+  border-color: #02a99d;
 }
-.contact-float-link.whatsapp:hover, .contact-float-link.whatsapp:focus {
-  background: #1ebe57;
+.contact-float-link:active {
+  transform: scale(0.96);
 }
-
-@keyframes fadeInLink {
-  from { opacity: 0; transform: translateY(24px) scale(.92);}
-  to   { opacity: 1; transform: none;}
-}
-
 @media (max-width: 600px) {
   .contact-float { right: 10px; bottom: 10px; }
-  .contact-float-menu { min-width: 120px; }
-  .contact-float-link { font-size: 0.95rem; padding: 8px 12px; }
+  .contact-float-menu { gap: 8px; }
+  .contact-float-link { width: 43px; height: 43px; }
+  .contact-float-link svg { width: 24px; height: 24px; }
 }
