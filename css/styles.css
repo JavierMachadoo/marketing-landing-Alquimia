@@ -188,4 +188,38 @@ img { max-width: 100%; height: auto; }
   transition: opacity .6s ease, transform .6s ease;
 }
 [data-reveal="fade-left"].revealed { opacity: 1; transform: translateX(0); }
+.btn, .btn:hover, .btn:focus {
+  text-decoration: none;
+}
+/* Botones sin subrayado */
+.btn, .btn:hover, .btn:focus {
+  text-decoration: none;
+}
+
+/* CTA Final */
+.cta--final {
+  background: #f9f9f9;
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+.cta--final h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+}
+.cta--final p {
+  margin-bottom: var(--space-4);
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+.cta--final .cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.cta--final .btn {
+  min-width: 200px;
+  font-size: 1rem;
+}
 
