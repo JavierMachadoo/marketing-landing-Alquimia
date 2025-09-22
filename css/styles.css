@@ -29,34 +29,61 @@ a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-/* Header */
+/* HEADER */
 .site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
   background: #fff;
-  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-.header-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: var(--space-3) 0;
-}
-.logo { max-height: 50px; }
-.nav ul {
-  list-style: none;
+
+.header-logo {
   display: flex;
-  justify-content: center;
-  gap: var(--space-4);
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: var(--space-2);
 }
+
+.header-logo img {
+  height: 55px;   /* podés ajustar si querés más grande */
+}
+
+.header-logo span {
+  font-size: 1.6rem;   /* más grande que el default */
+  font-weight: 700;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-5);
+}
+
 .nav a {
-  color: var(--color-accent);
+  text-decoration: none;
+  color: var(--color-dark);
   font-weight: 500;
+  transition: color .2s ease;
 }
-.header-cta .btn { padding: var(--space-2) var(--space-4); }
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Botón de contacto en header */
+.header-cta {
+  margin-left: auto;
+}
+
+.header-cta .btn {
+  font-size: 0.95rem;
+  padding: var(--space-2) var(--space-4);
+}
 
 /* Hero */
 .hero {
@@ -269,5 +296,42 @@ img { max-width: 100%; height: auto; }
   max-width: 350px;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
+}
+.hero--bg {
+  background: url("../assets/img/consultoriaMarketing.jpg") center/cover no-repeat;
+  position: relative;
+  color: #fff; /* texto blanco para contraste */
+  min-height: 80vh; /* ocupa gran parte de la pantalla */
+  display: flex;
+  align-items: center;
+}
+
+.hero--bg::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(11, 50, 60, 0.55); /* overlay oscuro con tu color institucional */
+}
+
+.hero-inner {
+  position: relative; /* para que el texto quede arriba del overlay */
+  max-width: 700px;
+  text-align: left;
+  z-index: 1;
+}
+
+.hero--bg h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.hero--bg h1 span {
+  color: var(--color-primary); /* resalta "Alquimia Marketing" */
+}
+
+.hero--bg p {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-4);
+  color: #eee; /* gris claro, legible sobre fondo */
 }
 
