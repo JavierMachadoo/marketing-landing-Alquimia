@@ -1,3 +1,5 @@
+/* ===== BOTÓN FLOTANTE DE CONTACTO ===== */
+
 .contact-float {
   position: fixed;
   bottom: 24px;
@@ -8,11 +10,19 @@
   align-items: flex-end;
   animation: fadeInFloat 0.7s cubic-bezier(.33,1,.68,1) 0.2s backwards;
 }
+
 @keyframes fadeInFloat {
-  from { opacity: 0; transform: translateY(50px) scale(.8);}
-  to   { opacity: 1; transform: none;}
+  from { 
+    opacity: 0; 
+    transform: translateY(50px) scale(.8);
+  }
+  to { 
+    opacity: 1; 
+    transform: none;
+  }
 }
 
+/* Botón principal */
 .contact-float-btn {
   width: 58px;
   height: 58px;
@@ -25,101 +35,129 @@
   cursor: pointer;
   outline: none;
   padding: 0;
+  margin-bottom: 10px;
   box-shadow: 0 6px 16px rgba(2,169,157,0.12), 0 1.5px 4px rgba(11,50,60,0.10);
-  transition: box-shadow 0.27s cubic-bezier(.33,1,.68,1), background 0.18s cubic-bezier(.33,1,.68,1), transform 0.17s cubic-bezier(.33,1,.68,1);
+  transition: box-shadow 0.27s cubic-bezier(.33,1,.68,1), transform 0.17s cubic-bezier(.33,1,.68,1);
   will-change: transform, box-shadow;
 }
+
 .contact-float-btn:hover,
 .contact-float-btn:focus {
-  background: #0b323c;
-  box-shadow: 0 10px 32px rgba(2,169,157,0.14);
   transform: scale(1.09) translateY(-2px);
 }
+
 .icon-user {
   width: 24px;
   height: 24px;
   display: block;
   object-fit: contain;
+  transition: transform 0.19s cubic-bezier(.33,1,.68,1);
 }
 
+/* Menú desplegable */
 .contact-float-menu {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(24px) scale(.96);
+  transform: translateY(24px) translateX(-9px) scale(.96);
   transition: opacity 0.32s cubic-bezier(.33,1,.68,1), transform 0.22s cubic-bezier(.33,1,.68,1);
-  align-items: flex-end;
   will-change: transform, opacity;
   filter: drop-shadow(0 4px 16px rgba(11,50,60,0.10));
 }
+
 .contact-float-menu.open {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0) scale(1.03);
+  transform: translateY(0) translateX(-9px);
 }
+
+/* Enlaces de contacto */
 .contact-float-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 49px;
-  height: 49px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #fff;
   box-shadow: 0 2px 8px rgba(2,169,157,0.09);
   border: none;
-  font-size: 1rem;
-  transition: background 0.15s cubic-bezier(.33,1,.68,1), box-shadow 0.19s cubic-bezier(.33,1,.68,1), transform 0.19s cubic-bezier(.33,1,.68,1);
+  background: #fff;
+  transition: background 0.15s cubic-bezier(.33,1,.68,1), 
+              box-shadow 0.19s cubic-bezier(.33,1,.68,1), 
+              transform 0.19s cubic-bezier(.33,1,.68,1);
   will-change: transform, opacity;
   color: #0b323c;
   opacity: 0.96;
   outline: none;
 }
+
+/* Quitar outline de focus para evitar que se vea "seleccionado" */
+.contact-float-link:focus {
+  outline: none !important;
+  box-shadow: 0 2px 8px rgba(2,169,157,0.09) !important;
+}
+
+/* Colores específicos */
 .contact-float-link.whatsapp {
   background: #25D366;
 }
+
 .contact-float-link.email {
   background: #fff;
 }
+
+/* Efectos hover */
 .contact-float-link:hover,
 .contact-float-link:focus {
-  background: #02a99d;
-  box-shadow: 0 8px 24px rgba(2,169,157,0.13);
   transform: scale(1.12) translateY(-2px);
 }
-.contact-float-link.whatsapp:hover,
-.contact-float-link.whatsapp:focus {
-  background: #128c7e;
+
+/* Asegurar que hover funcione incluso con focus activo */
+.contact-float-link:focus:hover {
+  transform: scale(1.12) translateY(-2px);
 }
-.contact-float-link.email:hover,
-.contact-float-link.email:focus {
-  background: #e0f7f4;
-}
+
 .contact-float-link:active {
   transform: scale(0.96);
 }
+
+/* Íconos dentro de los enlaces */
 .icon-contact {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   display: block;
   object-fit: contain;
+  transition: transform 0.19s cubic-bezier(.33,1,.68,1);
 }
 
-/* Mini logo en el header */
-.logo-titulo {
-  height: 34px;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 8px;
+.contact-float-link:hover .icon-contact,
+.contact-float-link:focus .icon-contact {
+  transform: scale(1.18);
 }
 
+/* Responsive */
 @media (max-width: 600px) {
-  .contact-float { right: 10px; bottom: 10px; }
-  .contact-float-menu { gap: 8px; }
-  .contact-float-link { width: 43px; height: 43px; }
-  .icon-contact { width: 22px; height: 22px; }
-  .icon-user { width: 18px; height: 18px; }
+  .contact-float { 
+    right: 10px; 
+    bottom: 10px; 
+  }
+  .contact-float-menu { 
+    gap: 7px; 
+  }
+  .contact-float-link { 
+    width: 34px; 
+    height: 34px; 
+  }
+  .icon-contact { 
+    width: 16px; 
+    height: 16px; 
+  }
+  .icon-user { 
+    width: 18px; 
+    height: 18px; 
+  }
 }
