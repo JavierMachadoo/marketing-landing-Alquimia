@@ -96,7 +96,6 @@ Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LI
 
 ## 📞 Mi Contacto
 
-**Alquimia Marketing**
 - 📧 Email: javiermachado245@gmail.com
 - 💬 WhatsApp: [+598 94005497](https://wa.me/59812345678)
 - 💼 LinkedIn: [Javier Machado](https://www.linkedin.com/in/javiermachadoo)
