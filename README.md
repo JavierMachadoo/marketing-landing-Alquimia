@@ -124,25 +124,6 @@ Luego abre `http://localhost:8000` en tu navegador.
 - ✅ **Cross-browser** - Compatible con navegadores modernos
 - ✅ **Progressive Enhancement** - Funcional sin JavaScript
 
-## 🚀 Deploy en GitHub Pages
-
-El proyecto se despliega automáticamente en GitHub Pages cuando se hace push a la rama `main`.
-
-**Para configurar tu propio deploy:**
-1. Ve a **Settings** → **Pages**
-2. Selecciona **Source**: Deploy from a branch
-3. Selecciona **Branch**: `main` / `root`
-4. El sitio estará disponible en `https://[tu-usuario].github.io/marketing-landing-Alquimia/`
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Agrega nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
 
 ## 📄 Licencia
 
