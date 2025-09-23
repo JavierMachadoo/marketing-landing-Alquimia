@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
     open = !open;
     menu.classList.toggle('open', open);
     openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Removemos el auto-focus para evitar que se vea "seleccionado"
     if (open) {
-      // Focus first link for accessibility
-      const firstLink = menu.querySelector('a');
-      if (firstLink) setTimeout(() => firstLink.focus(), 100);
+      // Asegurar que ningún enlace esté enfocado al abrir
+      setTimeout(() => {
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => link.blur());
+      }, 50);
     }
   }
 
@@ -29,21 +32,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeMenu();
-    // Tab trap: al tab fuera del menú, se cierra
-    if (open && e.key === 'Tab') {
-      const focusables = menu.querySelectorAll('a');
-      if (focusables.length) {
-        const first = focusables[0];
-        const last = focusables[focusables.length - 1];
-        if (document.activeElement === last && !e.shiftKey) {
-          e.preventDefault();
-          first.focus();
-        }
-        if (document.activeElement === first && e.shiftKey) {
-          e.preventDefault();
-          last.focus();
-        }
-      }
-    }
   });
 });
