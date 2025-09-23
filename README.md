@@ -97,7 +97,7 @@ Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LI
 ## 📞 Mi Contacto
 
 - 📧 Email: javiermachado245@gmail.com
-- 💬 WhatsApp: [+598 94005497](https://wa.me/59812345678)
+- 💬 WhatsApp: [+598 94005497](https://wa.me/59894005497)
 - 💼 LinkedIn: [Javier Machado](https://www.linkedin.com/in/javiermachadoo)
 
 ---
