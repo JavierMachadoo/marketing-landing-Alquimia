@@ -1,4 +1,4 @@
-# 🚀 Alquimia Marketing - Landing Page
+#  Alquimia Marketing - Landing Page
 
 [![Deploy to GitHub Pages](https://github.com/JavierMachadoo/marketing-landing-Alquimia/actions/workflows/deploy.yml/badge.svg)](https://github.com/JavierMachadoo/marketing-landing-Alquimia/actions/workflows/deploy.yml)
 
@@ -10,20 +10,20 @@
 
 Landing page moderna y responsive para **Alquimia Marketing**, una consultoría de marketing digital especializada en estrategias efectivas para pymes y emprendedores. 
 
-### ✨ Características principales
+###  Características principales
 
 - **Diseño responsive** - Adaptado a todos los dispositivos
-- **Interfaz moderna** - UI/UX limpia y profesional
+- **Interfaz moderna** - UI/UX limpia
 - **Animaciones suaves** - Efectos de scroll reveal
 - **Botón de contacto flotante** - Fácil acceso a WhatsApp y email
-- **Optimizado para conversión** - Call-to-actions estratégicamente ubicados
+- **Optimizado para conversión** - Call-to-action
 - **Portfolio de clientes** - Showcase de empresas que confían en Alquimia
 
-### 🎯 Secciones incluidas
+###  Secciones incluidas
 
 - **Hero** - Presentación principal con propuesta de valor
 - **Servicios** - Estrategia, redes sociales y campañas publicitarias
-- **Sobre mí** - Perfil profesional de Santiago Machado
+- **Sobre mí** - Perfil profesional de CEO & Founder
 - **Testimonios** - Experiencias de clientes satisfechos
 - **Portfolio de clientes** - Logos de empresas colaboradoras
 - **Contacto** - Información de contacto y enlaces directos
@@ -80,41 +80,6 @@ cd marketing-landing-Alquimia
 2. Abre el proyecto en VS Code
 3. Click derecho en `index.html` → "Open with Live Server"
 
-**Con Python:**
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-**Con Node.js:**
-```bash
-npx http-server
-```
-
-Luego abre `http://localhost:8000` en tu navegador.
-
-## 🎨 Personalización
-
-### Colores principales
-```css
-:root {
-  --color-primary: #02a99d;    /* Verde corporativo */
-  --color-accent: #0b323c;     /* Azul oscuro */
-  --color-bg: #ffffff;         /* Fondo */
-  --color-text: #333;          /* Texto principal */
-  --color-muted: #666;         /* Texto secundario */
-}
-```
-
-### Modificar contenido
-- **Información personal:** Edita las secciones en `index.html`
-- **Servicios:** Actualiza las cards en la sección `#servicios`
-- **Clientes:** Agrega/remueve logos en `assets/img/` y actualiza la sección `#clientes`
-- **Contacto:** Modifica los enlaces de WhatsApp y email
-
 ## 📱 Características técnicas
 
 - ✅ **Responsive Design** - Mobile-first approach
@@ -138,4 +103,4 @@ Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LI
 
 ---
 
-⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
+⭐ dale una estrella en GitHub si te gusto el proyectoo
