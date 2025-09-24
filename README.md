@@ -12,7 +12,7 @@ Landing page moderna y responsive para **Alquimia Marketing**, una consultoría 
 
 ###  Características principales
 
-- **Diseño responsive** - Adaptado a todos los dispositivos
+- **Diseño responsive** - Adaptado a todos los dispositivos computadora, celular y tablet
 - **Interfaz moderna** - UI/UX limpia
 - **Animaciones suaves** - Efectos de scroll reveal
 - **Botón de contacto flotante** - Fácil acceso a WhatsApp y email
