@@ -1,4 +1,4 @@
-# 🚀 Alquimia Marketing - Landing Page
+#  Alquimia Marketing - Landing Page
 
 [![Deploy to GitHub Pages](https://github.com/JavierMachadoo/marketing-landing-Alquimia/actions/workflows/deploy.yml/badge.svg)](https://github.com/JavierMachadoo/marketing-landing-Alquimia/actions/workflows/deploy.yml)
 
@@ -10,20 +10,20 @@
 
 Landing page moderna y responsive para **Alquimia Marketing**, una consultoría de marketing digital especializada en estrategias efectivas para pymes y emprendedores. 
 
-### ✨ Características principales
+###  Características principales
 
 - **Diseño responsive** - Adaptado a todos los dispositivos
-- **Interfaz moderna** - UI/UX limpia y profesional
+- **Interfaz moderna** - UI/UX limpia
 - **Animaciones suaves** - Efectos de scroll reveal
 - **Botón de contacto flotante** - Fácil acceso a WhatsApp y email
-- **Optimizado para conversión** - Call-to-actions estratégicamente ubicados
+- **Optimizado para conversión** - Call-to-action
 - **Portfolio de clientes** - Showcase de empresas que confían en Alquimia
 
-### 🎯 Secciones incluidas
+###  Secciones incluidas
 
 - **Hero** - Presentación principal con propuesta de valor
 - **Servicios** - Estrategia, redes sociales y campañas publicitarias
-- **Sobre mí** - Perfil profesional de Santiago Machado
+- **Sobre mí** - Perfil profesional de CEO & Founder
 - **Testimonios** - Experiencias de clientes satisfechos
 - **Portfolio de clientes** - Logos de empresas colaboradoras
 - **Contacto** - Información de contacto y enlaces directos
@@ -80,41 +80,6 @@ cd marketing-landing-Alquimia
 2. Abre el proyecto en VS Code
 3. Click derecho en `index.html` → "Open with Live Server"
 
-**Con Python:**
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-**Con Node.js:**
-```bash
-npx http-server
-```
-
-Luego abre `http://localhost:8000` en tu navegador.
-
-## 🎨 Personalización
-
-### Colores principales
-```css
-:root {
-  --color-primary: #02a99d;    /* Verde corporativo */
-  --color-accent: #0b323c;     /* Azul oscuro */
-  --color-bg: #ffffff;         /* Fondo */
-  --color-text: #333;          /* Texto principal */
-  --color-muted: #666;         /* Texto secundario */
-}
-```
-
-### Modificar contenido
-- **Información personal:** Edita las secciones en `index.html`
-- **Servicios:** Actualiza las cards en la sección `#servicios`
-- **Clientes:** Agrega/remueve logos en `assets/img/` y actualiza la sección `#clientes`
-- **Contacto:** Modifica los enlaces de WhatsApp y email
-
 ## 📱 Características técnicas
 
 - ✅ **Responsive Design** - Mobile-first approach
@@ -124,37 +89,17 @@ Luego abre `http://localhost:8000` en tu navegador.
 - ✅ **Cross-browser** - Compatible con navegadores modernos
 - ✅ **Progressive Enhancement** - Funcional sin JavaScript
 
-## 🚀 Deploy en GitHub Pages
-
-El proyecto se despliega automáticamente en GitHub Pages cuando se hace push a la rama `main`.
-
-**Para configurar tu propio deploy:**
-1. Ve a **Settings** → **Pages**
-2. Selecciona **Source**: Deploy from a branch
-3. Selecciona **Branch**: `main` / `root`
-4. El sitio estará disponible en `https://[tu-usuario].github.io/marketing-landing-Alquimia/`
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Agrega nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
 
 ## 📄 Licencia
 
 Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LICENSE).
 
-## 📞 Contacto
+## 📞 Mi Contacto
 
-**Alquimia Marketing**
-- 📧 Email: contacto@alquimia.com
-- 💬 WhatsApp: [+598 12345678](https://wa.me/59812345678)
-- 💼 LinkedIn: [Santiago Machado](https://www.linkedin.com/in/santiago-machado-mba-8627762/)
+- 📧 Email: javiermachado245@gmail.com
+- 💬 WhatsApp: [+598 94005497](https://wa.me/59894005497)
+- 💼 LinkedIn: [Javier Machado](https://www.linkedin.com/in/javiermachadoo)
 
 ---
 
-⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
+⭐ dale una estrella en GitHub si te gusto el proyectoo
