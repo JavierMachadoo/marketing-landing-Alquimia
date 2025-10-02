@@ -38,3 +38,33 @@ const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+
+// ===== MENÚ HAMBURGER PARA MÓVILES =====
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mainNav = document.getElementById("mainNav");
+  
+  if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener("click", () => {
+      mobileMenuToggle.classList.toggle("active");
+      mainNav.classList.toggle("active");
+    });
+    
+    // Cerrar menú al hacer click en un enlace
+    const navLinks = mainNav.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenuToggle.classList.remove("active");
+        mainNav.classList.remove("active");
+      });
+    });
+    
+    // Cerrar menú al hacer click fuera
+    document.addEventListener("click", (e) => {
+      if (!mobileMenuToggle.contains(e.target) && !mainNav.contains(e.target)) {
+        mobileMenuToggle.classList.remove("active");
+        mainNav.classList.remove("active");
+      }
+    });
+  }
+});
