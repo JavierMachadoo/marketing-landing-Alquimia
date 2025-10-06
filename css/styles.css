@@ -447,6 +447,95 @@ img {
   font-weight: 500;
 }
 
+/* Metodología y áreas de capacitación */
+
+.methodology {
+  margin-top: 2.6rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(2,169,157,0.04) 0%, rgba(11,50,60,0.02) 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(2,169,157,0.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.methodology h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+
+.methodology p { margin-bottom: 0.8rem; }
+
+.methodology-list,
+.training-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem 1rem;
+}
+
+.methodology-list li,
+.training-list li {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%);
+  padding: 0.8rem 1rem 0.8rem 3.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(2,169,157,0.06);
+  box-shadow: 0 6px 18px rgba(2,169,157,0.04);
+  font-size: 0.96rem;
+  color: var(--color-text);
+  position: relative;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.methodology-list li::before,
+.training-list li::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  box-shadow: 0 6px 18px rgba(2,169,157,0.12);
+}
+
+.methodology-list li:hover,
+.training-list li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(2,169,157,0.12);
+}
+
+.methodology-list li::after,
+.training-list li::after {
+  content: '\2713'; /* check mark */
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.methodology-list li span,
+.training-list li span { display: inline-block; }
+
+/* Ajuste para que el texto no quede pegado al icono */
+.methodology-list li,
+.training-list li { padding-left: 64px; }
+
+@media (max-width: 768px) {
+  .methodology-list,
+  .training-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Mobile responsiveness for testimonials */
 @media (max-width: 768px) {
   .testimonials-grid {
