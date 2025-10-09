@@ -60,7 +60,7 @@ marketing-landing-Alquimia/
         └── [logos-clientes...]   # Portfolio de clientes
 ```
 
-## 🚀 Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 ### Opción 1: Abrir directamente
 ```bash
@@ -73,14 +73,14 @@ cd marketing-landing-Alquimia
 # Abre index.html en tu navegador
 ```
 
-### Opción 2: Servidor local (recomendado)
+### Opción 2: Servidor local
 
 **Con VS Code + Live Server:**
 1. Instala la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 2. Abre el proyecto en VS Code
 3. Click derecho en `index.html` → "Open with Live Server"
 
-## 📱 Características técnicas
+##  Características técnicas
 
 - ✅ **Responsive Design** - Mobile-first approach
 - ✅ **SEO optimizado** - Meta tags y estructura semántica
@@ -89,10 +89,6 @@ cd marketing-landing-Alquimia
 - ✅ **Cross-browser** - Compatible con navegadores modernos
 - ✅ **Progressive Enhancement** - Funcional sin JavaScript
 
-
-## 📄 Licencia
-
-Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](LICENSE).
 
 ## 📞 Mi Contacto
 
