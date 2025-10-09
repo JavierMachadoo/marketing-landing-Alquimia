@@ -90,7 +90,7 @@ cd marketing-landing-Alquimia
 - ✅ **Progressive Enhancement** - Funcional sin JavaScript
 
 
-## 📞 Mi Contacto
+##  Mi Contacto
 
 - 📧 Email: javiermachado245@gmail.com
 - 💬 WhatsApp: [+598 94005497](https://wa.me/59894005497)
@@ -98,4 +98,4 @@ cd marketing-landing-Alquimia
 
 ---
 
-⭐ dale una estrella en GitHub si te gusto el proyectoo
+⭐ si leiste hasta acá dale una estrella al repositorio :)
