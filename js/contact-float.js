@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     open = !open;
     menu.classList.toggle('open', open);
     openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    // Removemos el auto-focus para evitar que se vea "seleccionado"
     if (open) {
-      // Asegurar que ningún enlace esté enfocado al abrir
       setTimeout(() => {
         const links = menu.querySelectorAll('a');
         links.forEach(link => link.blur());

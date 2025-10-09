@@ -1,6 +1,5 @@
-# Node (por si en el futuro probás cosas)
+
 node_modules/
 npm-debug.log*
 
-# VS Code
 .vscode/

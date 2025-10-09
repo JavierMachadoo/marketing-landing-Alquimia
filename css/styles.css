@@ -72,7 +72,6 @@ img {
   display: block;
 }
 
-/* Menú hamburger (oculto por defecto) */
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
